@@ -1,43 +1,19 @@
-# Grand Stack Starter Lite
+# Deno-Diceware
 
-Get stared with creating a [GRANDStack Application](grandstack.io) in no time, with this lightweight template repository.
+Password generating Command-Line Utility. Built with Deno@1.0.0
 
 ## Getting Started
 
-- Click the "Use this template" button, underneath the languages breakdown
-- Update the "LICENSE" file with the year, and your name
-- Pick a UI Library, make sure the "Dockerfile" and ".dockerignore" files in are that libraries path. Then delete the other from the repository.
-- Run the stack
-  - Start the applications independently
-  - Run the docker-compose file
+- `deno run --allow-read --allow-write --allow-net src/index.ts`
+- `deno install --allow-read --allow-write --allow-net src/index.ts`
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/en/download/) v10 or greater
-  You can install via direct download, or a version manager like [NVM](https://github.com/nvm-sh/nvm)
-- [Docker](https://docs.docker.com/get-docker/)
-
-### Installing
-
-- React, Angular, Api
-  - `cd` into the project directory, and run `npm install`
-- Neo4j
-  - Follow one of their setup guides [here](https://neo4j.com/docs/operations-manual/current/installation/)
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
+- [Deno](https://deno.land/)
 
 ## Built With
 
-- [Node.JS](nodejs.org)
-- [Neo4J](neo4j.com)
-- [GraphQL](graphql.org)
-- [React](reactjs.org)
-- [Angular](angular.io)
-- [Docker](www.docker.com)
-- [Now](https://github.com/zeit/now)
-- See package.json in each project for full dependency lists
+- [Deno](https://deno.land/)
 
 ## Contributing
 
@@ -56,10 +32,3 @@ See also the list of [contributors](https://github.com/your/project/contributors
 ## License
 
 This project is licensed under the Apache v2.0 License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-- Everyone at Neo4J for not only making a great product, but also a great eco-system that makes it a breeze to work with.
-- Facebook for React, the amazing UI library
-- Apollo for the line of GraphQL products they maintain
-- GraphQL Foundation for... GraphQL

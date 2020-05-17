@@ -1,4 +1,7 @@
 import { readLines } from "https://deno.land/std@v0.50.0/io/bufio.ts";
+import { parse } from "https://deno.land/std/flags/mod.ts";
+
+const { args } = Deno;
 const decoder = new TextDecoder("utf-8");
 const encoder = new TextEncoder();
 
@@ -55,8 +58,13 @@ function generatePassword(wordList: ObjectLiteral): string {
 
 async function main(): Promise<void> {
   try {
-    const wordList = await getWordList();
-    console.log(generatePassword(wordList));
+    const passedArgs = parse(args);
+    if (passedArgs.h || passedArgs.help) {
+      console.log("help message");
+    } else {
+      const wordList = await getWordList();
+      console.log(generatePassword(wordList));
+    }
   } catch (err) {
     console.error(err);
   }

@@ -5,7 +5,7 @@ Password generating Command-Line Utility. Built with Deno@1.0.0
 ## Getting Started
 
 - `deno run --allow-read --allow-write --allow-net src/index.ts`
-- `deno install --allow-read --allow-write --allow-net src/index.ts`
+- `deno install --allow-read --allow-write --allow-net --name diceware src/index.ts`
 
 ### Prerequisites
 

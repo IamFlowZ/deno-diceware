@@ -21,7 +21,7 @@ Please read [CONTRIBUTING.md](https://github.com/iamflowz/) for details on our c
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/iamflowz/grand-stack-starter-lite/tags).
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/iamflowz/deno-diceware/tags).
 
 ## Authors
 

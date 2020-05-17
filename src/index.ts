@@ -50,10 +50,12 @@ function getKey(): string {
   return `${key()}${key()}${key()}${key()}${key()}`;
 }
 
-function generatePassword(wordList: ObjectLiteral): string {
-  return `${capitalize(wordList[getKey()])}${capitalize(
-    wordList[getKey()]
-  )}${capitalize(wordList[getKey()])}`;
+function generatePassword(wordList: ObjectLiteral, numWords: number): string {
+  let str = "";
+  for (let index = 0; index < numWords; index++) {
+    str = str.concat("", capitalize(wordList[getKey()]));
+  }
+  return str;
 }
 
 async function main(): Promise<void> {
@@ -61,9 +63,13 @@ async function main(): Promise<void> {
     const passedArgs = parse(args);
     if (passedArgs.h || passedArgs.help) {
       console.log("help message");
-    } else {
+    } else if (passedArgs.count) {
       const wordList = await getWordList();
-      console.log(generatePassword(wordList));
+      console.log(generatePassword(wordList, passedArgs.count));
+    } else {
+      console.log(
+        'Please use the "--count" flag with the number of words you would like to have in your password.'
+      );
     }
   } catch (err) {
     console.error(err);
